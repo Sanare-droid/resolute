@@ -1,11 +1,16 @@
 {
+  "version": 2,
   "buildCommand": "npm run build:client",
   "outputDirectory": "dist/spa",
-  "cleanUrls": true,
-  "rewrites": [
+  "framework": null,
+  "installCommand": "npm install",
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
