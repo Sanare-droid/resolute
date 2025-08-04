@@ -1,9 +1,13 @@
 {
-  "version": 2,
-  "buildCommand": "npm run build:client",
-  "outputDirectory": "dist/spa",
-  "framework": null,
-  "installCommand": "npm install",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/spa"
+      }
+    }
+  ],
   "routes": [
     {
       "handle": "filesystem"
